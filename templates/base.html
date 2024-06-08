@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiker Management System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Traveler Assist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category }}">{{ message }}</div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+    <header>
+        <h1>Traveler Assist</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('member.list_members') }}">Members</a></li>
+                <li><a href="{{ url_for('travel.list_travel_intents') }}">Travel Intents</a></li>
+                <li><a href="{{ url_for('map.plan_route') }}">Plan Route</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
         {% block content %}{% endblock %}
-    </div>
+    </main>
 </body>
 </html>

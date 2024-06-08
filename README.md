@@ -1,4 +1,4 @@
-#TravelSystem
+# TravelSystem
 ## HIT 软工实验实践
 
  - 用户故事：
@@ -16,6 +16,7 @@
 
 ### 第一轮迭代
 
+
 - 用户故事
   ~~~
     [ * ] &emsp;用户登录注册
@@ -29,3 +30,17 @@
     [&emsp;] &emsp;旅游日志撰写
   ~~~
 
+## 运行
+
+  安装相关依赖
+  ~~~bash
+  pip install -r requirement.txt
+  ~~~
+  直接运行app.py
+  ~~~bash
+  python app.py
+  ~~~
+  然后在浏览器登录
+  ~~~
+  127.0.0.1:8080
+  ~~~

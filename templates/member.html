@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Members</h2>
+<ul>
+    {% for member in members %}
+    <li>{{ member.username }} ({{ member.email }}) - Hobbies: {{ member.hobbies }}</li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('member.register') }}">Register New Member</a>
+{% endblock %}

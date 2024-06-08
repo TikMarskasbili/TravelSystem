@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add Travel Intent</h2>
+<form method="POST">
+    <label for="member_id">Member ID:</label>
+    <input type="number" id="member_id" name="member_id" required><br>
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" name="destination" required><br>
+    <label for="travel_time">Travel Time:</label>
+    <input type="text" id="travel_time" name="travel_time" required><br>
+    <label for="budget">Budget:</label>
+    <input type="number" step="0.01" id="budget" name="budget" required><br>
+    <label for="companion_requirements">Companion Requirements:</label>
+    <input type="text" id="companion_requirements" name="companion_requirements"><br>
+    <button type="submit">Add</button>
+</form>
+{% endblock %}
