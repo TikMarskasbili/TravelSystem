@@ -8,7 +8,10 @@
         }
     </script>
     <script>
-        function post_login(username, password) {
+            function post_login() {
+            // 获取输入框的值  
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('pwd').value;
             // 创建一个 XMLHttpRequest 对象
             var xhr = new XMLHttpRequest();
             // 设置请求方法和目标 URL
@@ -39,14 +42,15 @@
         }
     </script>
 </head>
-
     <div align="center">
-        <h2>用户登陆</h2>
+        <p></p>
+        <h1>用户登陆</h1>
+        <p></p>
         <p>用户名：</p>
         <p><input class="text" id="username" name="username" type="text"  size="20" maxlength="30" value=""></p>
         <p>密码：</p>
-        <p><input class="text" id="pwd" size="20" maxlength="30" type="password" name="pwd" value=""></p>
-        <p><button type="button" onclick="post_login(username.value,password.value);" style="width: 100px;" value="确认登录">登录</button></p>
+        <p><input class="text" id="pwd" name="pwd" type="password" size="20" maxlength="30" value=""></p>
+        <p><button type="button" onclick="post_login();" style="width: 100px;" value="确认登录">登录</button></p>
         <p><button type="button" onclick="redirectToRegister()" style="width: 100px;">注册</button></p>
     </div>
 </body>

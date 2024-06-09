@@ -1,15 +1,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traveler Assist</title>
+    <title>驴友旅游自由行</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <header>
-    <h1>Traveler Assist</h1>
+    <h1>驴友旅游自由行</h1>
     <nav>
         <ul>
-            <li><a href="{{ url_for('member.list_members') }}">登录/注册</a></li>
+            <!-- <li><a href="{{ url_for('member.list_members') }}">登录/注册</a></li> -->
             <li><a href="{{ url_for('travel.list_travel_intents') }}">旅游意向</a></li>
             <li><a href="{{ url_for('map.plan_route') }}">路线规划</a></li>
         </ul>

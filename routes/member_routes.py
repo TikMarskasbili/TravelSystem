@@ -1,6 +1,5 @@
-from flask import Blueprint, render_template, request, redirect, url_for, jsonify
+from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash
 from models import db, Member
-import flash
 bp = Blueprint('member', __name__)
 
 @bp.route('/members')
