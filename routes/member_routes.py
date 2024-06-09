@@ -7,6 +7,11 @@ def list_members():
     members = Member.query.all()
     return render_template('member.html', members=members)
 
+@bp.route('/members/manage')
+def list_manage():
+    members = Member.query.all()
+    return render_template('member_manage.html', members=members)
+
 @bp.route('/login', methods=['POST'])
 def login():
     data = request.get_json()

@@ -1,0 +1,10 @@
+{% extends "member.html" %}
+
+{% block content %}
+
+<ul>
+    {% for member in members %}
+    <li>{{ member.username }} {{ member.email }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

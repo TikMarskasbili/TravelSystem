@@ -12,16 +12,10 @@
             <!-- <li><a href="{{ url_for('member.list_members') }}">登录/注册</a></li> -->
             <li><a href="{{ url_for('travel.list_travel_intents') }}">旅游意向</a></li>
             <li><a href="{{ url_for('map.plan_route') }}">路线规划</a></li>
+            <li><a href="{{ url_for('member.list_manage') }}">会员管理</a></li>
         </ul>
     </nav>
 </header>
 <main>
     {% block content %}{% endblock %}
 </main>
-
-<!-- <ul>
-    {% for member in members %}
-    <li>{{ member.username }} {{ member.email }}</li>
-    {% endfor %}
-</ul> -->
-

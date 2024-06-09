@@ -1,10 +1,11 @@
-{% extends "base.html" %}
+{% extends "member.html" %}
 
 {% block content %}
 <h2>Travel Intents</h2>
 <ul>
     {% for intent in intents %}
-    <li>{{ intent.destination }} - Time: {{ intent.travel_time }} - Budget: ${{ intent.budget }} - Requirements: {{ intent.companion_requirements }}</li>
+    <li>{{ intent.destination }} - Time: {{ intent.travel_time }} - Budget: ${{ intent.budget }} - Requirements: {{
+        intent.companion_requirements }}</li>
     {% endfor %}
 </ul>
 <a href="{{ url_for('travel.add_travel_intent') }}">Add New Travel Intent</a>
