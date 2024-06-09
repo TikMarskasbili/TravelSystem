@@ -7,7 +7,7 @@ class Member(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    hobbies = db.Column(db.String(200), nullable=True)
+    pwd = db.Column(db.String(200), unique=True, nullable=True)
 
 class TravelIntent(db.Model):
     id = db.Column(db.Integer, primary_key=True)
