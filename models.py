@@ -7,7 +7,7 @@ class Member(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    pwd = db.Column(db.String(200), unique=True, nullable=True)
+    pwd = db.Column(db.String(200), unique=False, nullable=True)
 
 class TravelIntent(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -30,3 +30,13 @@ class TravelGuide(db.Model):
     destination = db.Column(db.String(100), nullable=False)
     content = db.Column(db.Text, nullable=False)
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+
+class TravelRoad(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    department = db.Column(db.String(100), nullable=False)
+    destination = db.Column(db.String(100), nullable=False)
+    road = db.Column(db.String(100), nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    rating = db.Column(db.Integer, nullable=False)
+    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+

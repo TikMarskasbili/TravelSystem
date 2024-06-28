@@ -1,0 +1,22 @@
+{% extends "member.html" %}
+
+{% block content %}
+<div align="center">
+<h2>路线评价</h2>
+<a href="{{ url_for('road.add_travel_road') }}">添加路线评价</a>
+</div>
+<ul>
+    {% for road in roads %}
+    <li>
+        <h2>{{ road.department }}--{{road.destination }}</h2>
+        <p>出发地：{{ road.department }}</p>
+        <p>目的地：{{road.destination }}</p>
+        <p>路线：{{ road.department }}-{{road.road }}-{{road.destination }}</p>
+        <p>评分：{{ road.rating }}/5</p>
+        <p>评价：{{ road.content }}</p>
+        <p>    </p>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

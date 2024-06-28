@@ -1,28 +1,22 @@
-{% extends "base.html" %}
+{% extends "member.html" %}
 
 {% block content %}
-<h2>Travel Logs</h2>
+<div align="center">
+<h2>旅游攻略</h2>
+<a href="{{ url_for('log.add_log') }}">添加新旅游攻略</a>
 <ul>
     {% for log in logs %}
     <li>
         <h3>{{ log.title }}</h3>
         <p>{{ log.content }}</p>
-        <p>Rating: {{ log.rating }}/5</p>
-        <p>Posted by Member ID: {{ log.member_id }} on {{ log.date_posted }}</p>
+        <p>评分: {{ log.rating }}</p>
+        <p>用户: {{ log.member_id }} 于 {{ log.date_posted }}上传</p>
+        <p>   </p>
     </li>
     {% endfor %}
 </ul>
-<a href="{{ url_for('log.add_log') }}">Add New Log</a>
 
-<h2>Travel Guides</h2>
-<ul>
-    {% for guide in guides %}
-    <li>
-        <h3>{{ guide.destination }}</h3>
-        <p>{{ guide.content }}</p>
-        <p>Posted on {{ guide.date_posted }}</p>
-    </li>
-    {% endfor %}
-</ul>
-<a href="{{ url_for('log.add_guide') }}">Add New Guide</a>
+
+
+</div>
 {% endblock %}

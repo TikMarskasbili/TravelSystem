@@ -1,0 +1,20 @@
+{% extends "member.html" %}
+
+{% block content %}
+<div align="center">
+
+<h2>旅游日志</h2>
+<a href="{{ url_for('log.add_guide') }}">添加新旅游日志</a>
+<ul>
+    {% for guide in guides %}
+    <li>
+        <h3>{{ guide.destination }}</h3>
+        <p>{{ guide.content }}</p>
+        <p>上传于 {{ guide.date_posted }}</p>
+        <p>   </p>
+    </li>
+    {% endfor %}
+</ul>
+
+</div>
+{% endblock %}

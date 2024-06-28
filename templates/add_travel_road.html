@@ -1,0 +1,25 @@
+{% extends "member.html" %}
+
+{% block content %}
+
+<h2>添加路线评价</h2>
+<form method="POST">
+    <label for="department">出发地:</label>
+    <input type="text" id="department" name="department" required><br>
+
+    <label for="destination">目的地:</label>
+    <input type="text" id="destination" name="destination" required><br>
+
+    <label for="road">途径地:</label>
+    <input type="text" id="road" name="road" required><br>
+
+    <label for="content">路线评价:</label>
+    <textarea id="content" id="content" name="content" required></textarea><br>
+
+    <label for="rating">评分:</label>
+    <input type="number" id="rating" name="rating" min="1" max="5" required><br>
+
+    <div align="center"><button type="submit">添加</button></div>
+</form>
+
+{% endblock %}

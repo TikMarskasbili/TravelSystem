@@ -1,12 +1,12 @@
-{% extends "base.html" %}
+{% extends "member.html" %}
 
 {% block content %}
-<h2>Add Travel Guide</h2>
+<h2>撰写旅游攻略</h2>
 <form method="POST">
-    <label for="destination">Destination:</label>
+    <label for="destination">目的地:</label>
     <input type="text" id="destination" name="destination" required><br>
-    <label for="content">Content:</label>
+    <label for="content">内容:</label>
     <textarea id="content" name="content" required></textarea><br>
-    <button type="submit">Add</button>
+    <div align="center"><button type="submit" style="width: 100px;">添加</button></div>
 </form>
 {% endblock %}

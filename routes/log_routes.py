@@ -3,12 +3,17 @@ from flask import Blueprint, render_template, request, redirect, url_for
 from models import db, TravelLog, TravelGuide
 
 bp = Blueprint('log', __name__)
+# 
 
 @bp.route('/logs')
 def list_logs():
     logs = TravelLog.query.all()
+    return render_template('logs.html', logs=logs)
+
+@bp.route('/guides')
+def list_guides():
     guides = TravelGuide.query.all()
-    return render_template('logs.html', logs=logs, guides=guides)
+    return render_template('guide.html', guides=guides)
 
 @bp.route('/add_log', methods=['GET', 'POST'])
 def add_log():
@@ -31,5 +36,5 @@ def add_guide():
         new_guide = TravelGuide(destination=destination, content=content)
         db.session.add(new_guide)
         db.session.commit()
-        return redirect(url_for('log.list_logs'))
+        return redirect(url_for('log.list_guides'))
     return render_template('add_guide.html')
